@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-bottom: 2px solid var(--color-grey);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.bsyoutube {
+  font-size: 2.5rem;
+  color: var(--color-brand);
+}
+
+.h1 {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 60%;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  background-color: var(--color-black);
+  font-size: 1.3rem;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--color-zinc-light);
+  color: var(--color-text);
+  border: none;
+  outline: none;
+}
