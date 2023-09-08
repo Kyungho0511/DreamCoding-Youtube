@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.text {
+  font-size: large;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}

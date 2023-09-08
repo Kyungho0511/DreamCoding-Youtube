@@ -1,20 +1,17 @@
-import styles from "./Videos.module.css";
+import styles from "./ChannelVideos.module.css";
 import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
-import VideoCard from "../components/VideoCard";
 import { useYoutubeApi } from "../context/YoutubeApiContext";
+import VideoCard from "./VideoCard";
 
-export default function Videos() {
-  const { keyword } = useParams();
+export default function ChannelVideos({ id }) {
   const { youtube } = useYoutubeApi();
   const {
     isLoading,
     error,
     data: videos,
-  } = useQuery(["videos", keyword], () => youtube.search(keyword), {
-    staleTime: 1000 * 60 * 1,
+  } = useQuery(["videos", id], () => youtube.channelVideos(id), {
+    staleTime: 1000 * 60 * 5,
   });
-
   return (
     <>
       {isLoading && <p>Loading...</p>}
@@ -22,7 +19,7 @@ export default function Videos() {
       {videos && (
         <ul className={styles.list}>
           {videos.map((video) => (
-            <VideoCard key={video.id} video={video} />
+            <VideoCard key={video.id} video={video} type={"list"} />
           ))}
         </ul>
       )}
